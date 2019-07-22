@@ -59,16 +59,22 @@
         "router" : {
             "mode" : "history"
         },
-		"devServer": {
-            "port": 8800,
-            "disableHostCheck": true,
-            "proxy": {
-                "/fruits": {
-                    "target": "http://localhost:8986",
-                    "changeOrigin": true,
-                    "secure": false
-                }
+        "devServer" : {
+            "port" : 8800,
+            "disableHostCheck" : true,
+            "proxy" : {
+                "/fruits" : {
+                    "target" : "http://localhost:8986",
+                    "changeOrigin" : true,
+                    "secure" : false
+                },
+				"/socket" : {
+				    "target" : "http://localhost:8935",
+				    "changeOrigin" : true,
+				    "secure" : false
+				}
             }
-        }
+        },
+        "template" : "index.html"
     }
 }

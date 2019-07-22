@@ -61,11 +61,17 @@ const queryAllDriver = ()=>{
 const queryAllCarpooling = ()=>{
 	return request('/fruits/carpooling/queryAllCarpooling','get');
 }
-
+/**
+ * 发送一个叮
+ */
+const sendDing = (param)=>{
+	return request('/socket/checkcenter/socket/push/12','get',param);
+}
 export default {
     getUsers,
     addUser,
 	loginByAccount,
 	queryAllDriver,
-	queryAllCarpooling
+	queryAllCarpooling,
+	sendDing
 }
